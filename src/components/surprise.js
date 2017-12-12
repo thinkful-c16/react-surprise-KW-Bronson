@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import SurpriseButton from './surprise-button';
+import SurpriseButton from './surprise-button';
 import SurpriseImage from './surprise-image';
 
 export default class Surprise extends React.Component {
@@ -9,11 +9,16 @@ export default class Surprise extends React.Component {
         this.state = {image: false};
     }
 
+    switch() {
+        this.setState({image: true});
+    }
+
     render() {
         // Show the button to start with
-        if (!this.state.image) {
-            return <button className='showButton' onClick={() => this.setState({image: true})}>Surprise!</button>
-        } 
+        if (this.state.image === false) {
+            return <SurpriseButton onChange={(e) => this.switch()} />
+            // return <button className='showButton' onClick={() => this.setState({image: true})}>Surprise!</button>
+        } else if (this.state.image === true)
         return (
             <SurpriseImage />
         )
