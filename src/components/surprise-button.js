@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SurpriseButton(props) {
     return (
-    <button onClick={() => props.onChange()}>Surprise!</button>
+    <button onClick={() => props.onFOOClick()}>Surprise!</button>
 
 );
 }
