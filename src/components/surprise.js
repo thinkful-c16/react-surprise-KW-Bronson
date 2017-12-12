@@ -17,7 +17,7 @@ export default class Surprise extends React.Component {
         // Show the button to start with
         if (this.state.image === false) {
             return <SurpriseButton onChange={(e) => this.switch()} />
-            // return <button className='showButton' onClick={() => this.setState({image: true})}>Surprise!</button>
+            
         } else if (this.state.image === true)
         return (
             <SurpriseImage />
